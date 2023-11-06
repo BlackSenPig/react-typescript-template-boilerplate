@@ -1,6 +1,6 @@
 {
     "name": "reactjs-typescript-template-boilerplate",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "reactjs-typescript-template-boilerplate",
     "scripts": {
         "start": "webpack serve --config webpack/webpack.config.js --env env=dev",
