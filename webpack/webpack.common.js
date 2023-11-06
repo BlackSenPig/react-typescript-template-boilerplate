@@ -38,6 +38,8 @@ module.exports = {
       },
       {
         test: /\.css$/,
+        //fix css outside
+        sideEffects: true,
         use: ["style-loader", "css-loader"],
       },
       {
@@ -67,11 +69,42 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.(png|jpe?g|gif|svg|webp)$/i,
+        use: [
+          {
+            loader: "image-webpack-loader",
+            options: {
+              disable: process.env.NODE_ENV === "production" ? false : true,
+              mozjpeg: {
+                progressive: true,
+                quality: 65,
+              },
+              optipng: {
+                enabled: false,
+              },
+              pngquant: {
+                quality: [0.65, 0.9],
+                speed: 4,
+              },
+              gifsicle: {
+                interlaced: false,
+              },
+              webp: {
+                quality: 75,
+              },
+            },
+          },
+        ],
+      },
     ],
   },
   output: {
     path: path.resolve(__dirname, "..", "./build"),
     filename: "bundle.js",
+  },
+  devServer: {
+    historyApiFallback: true,
   },
   plugins: [
     new HtmlWebpackPlugin({

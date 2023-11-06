@@ -5,12 +5,19 @@ module.exports = {
   mode: "development",
   devtool: "cheap-module-source-map",
   devServer: {
+    open:
+    {
+      app:
+      {
+        name: 'Google Chrome'
+      }
+    },
     hot: true,
-    open: true,
+    //open: true,
     port: 80,
   },
   plugins: [
-  //  new ReactRefreshWebpackPlugin(),
+    //  new ReactRefreshWebpackPlugin(),
     new webpack.DefinePlugin({
       "process.env.name": JSON.stringify("Vishwas"),
     }),
