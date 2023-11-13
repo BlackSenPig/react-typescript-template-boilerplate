@@ -17,6 +17,7 @@
     ],
     "license": "MIT",
     "dependencies": {
+        "copy-webpack-plugin": "^11.0.0",
         "eslint-config-airbnb-typescript": "^17.1.0",
         "i18next": "^23.6.0",
         "i18next-browser-languagedetector": "^7.1.0",
