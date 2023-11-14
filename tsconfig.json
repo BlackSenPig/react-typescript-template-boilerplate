@@ -2,8 +2,8 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "@/*": ["src/*"],
-      "@i18n": ["i18n.ts"]
+      "@/*": ["./src/*"],
+      "@i18n": ["./i18n.ts"]
     },
     "target": "ES2016" /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020', or 'ESNEXT'. */,
     "module": "ESNext" /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', 'es2020', or 'ESNext'. */,
@@ -23,5 +23,5 @@
     "allowJs": true /* Allow javascript files to be compiled. Useful when migrating JS to TS */,
     "checkJs": true /* Report errors in .js files. Works in tandem with allowJs. */
   },
-  "include": ["src/**/*", "locales", "i18n.ts", "src/types/*"],
+  "include": ["./src/**/*", "./locales", "./i18n.ts", "./src/types/*"],
 }
