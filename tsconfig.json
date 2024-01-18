@@ -3,6 +3,7 @@
     "baseUrl": "./",
     "paths": {
       "@/*": ["./src/*"],
+      "@app/*": ["./src/app/*"],
       "@i18n": ["./i18n.ts"]
     },
     "target": "ES2016" /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020', or 'ESNEXT'. */,
@@ -12,6 +13,8 @@
       "DOM",
       "ESNext"
     ] /* Specify library files to be included in the compilation. */,
+    "strictNullChecks": true,
+    "noImplicitAny": true,
     "jsx": "react-jsx" /* Specify JSX code generation: 'preserve', 'react-native', 'react' or 'react-jsx'. */,
     "noEmit": true /* Do not emit outputs. */,
     "isolatedModules": true /* Transpile each file as a separate module (similar to 'ts.transpileModule'). */,
@@ -24,4 +27,5 @@
     "checkJs": true /* Report errors in .js files. Works in tandem with allowJs. */
   },
   "include": ["./src/**/*", "./locales", "./i18n.ts", "./src/types/*"],
+  "exclude": ["./solidity/*"]
 }
